@@ -19,11 +19,25 @@ layout: survey_default
   Thanks for getting informed and don’t forget to vote by November 2nd!
 </p>
 
+<img src="/assets/esd-map.png" usemap="#image-map" alt="ESD Map" width="100%">
+
+<map name="image-map">
+    <area target="" alt="ESD114" title="ESD114" href="#114" coords="102,431,41,210,416,303,458,480" shape="poly">
+    <area target="" alt="ESD113" title="ESD113" href="#113" coords="106,445,406,494,459,648,675,695,673,785,181,754" shape="poly">
+    <area target="" alt="ESD112" title="ESD112" href="#112" coords="184,777,654,811,651,898,733,922,748,976,785,1002,416,1012,368,872,171,816" shape="poly">
+    <area target="" alt="ESD189" title="ESD189" href="#189" coords="439,24,804,26,743,369,507,378,426,246,329,102,459,91" shape="poly">
+    <area target="" alt="ESD121" title="ESD121" href="#121" coords="466,398,750,392,674,667,476,647,423,506,478,490" shape="poly">
+    <area target="" alt="ESD171" title="ESD171" href="#171" coords="818,33,1193,32,1190,636,988,604,968,539,763,454" shape="poly">
+    <area target="" alt="ESD105" title="ESD105" href="#105" coords="746,457,944,571,970,625,1098,634,1092,689,1003,716,981,960,814,1003,746,898,677,875" shape="poly">
+    <area target="" alt="ESD101" title="ESD101" href="#101" coords="1203,32,1576,700" shape="rect">
+    <area target="" alt="ESD123" title="ESD123" href="#123" coords="1014,739,1112,718,1121,651,1176,663,1218,722,1582,739,1613,904,1008,957" shape="poly">
+</map>
+
 {% assign grouped_districts = site.data.districts | group_by: 'esd' %}
 
 <div class="container">
   {% for region in grouped_districts %}
-    <div class="card mb-3">
+    <div id="{{region.name}}" class="card mb-3">
       <div class="card-body">
         <a href="{{region.name | datapage_url: 'responses'}}" class="link-dark">
           <h5 class="card-title">
@@ -58,3 +72,7 @@ layout: survey_default
     <a href="#top">Back to top</a>
   {% endfor %}
 </div>
+
+<script>
+  imageMapResize();
+</script>
