@@ -3,7 +3,7 @@ layout: survey_default
 nav: false
 ---
 
-<h1>ESD {{page.items.first.esd}} {{page.items.first.esdname}}</h1>
+<h1 id="top">ESD {{page.items.first.esd}} {{page.items.first.esdname}}</h1>
 
 <p>
 All candidates who provided a valid email address when they registered their campaign have been invited to participate.
@@ -15,6 +15,14 @@ We're happy to add their responses. <a href="https://forms.gle/HPL5bJr7eKZWwXAo8
 <p>
 To find contact information, go to <a href="https://voter.votewa.gov/CandidateList.asp">https://voter.votewa.gov/CandidateList.asp</a>, choose your County and add the word "school" under District type.</p>
 {% assign grouped_districts = page.items | group_by: 'district' %}
+
+<ul style="columns: 2">
+  {% for district in grouped_districts %}
+    <li>
+      <a href="#{{district.name | slugify}}">{{district.name}} {{district.items.first.type}}</a>
+    </li>
+  {% endfor %}
+</ul>
 
 {% for district in grouped_districts %}
   <h2 class="text-center district" id="{{district.name | slugify}}">{{district.name}} {{district.items.first.type}}</h2>
@@ -51,4 +59,5 @@ To find contact information, go to <a href="https://voter.votewa.gov/CandidateLi
       {% endfor %}
     </div>
   {% endfor %}
+  <a href="#top">Back to top</a>
 {% endfor %}

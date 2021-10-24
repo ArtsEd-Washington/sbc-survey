@@ -5,7 +5,7 @@
 layout: survey_default
 ---
 
-<p>
+<p id="top">
   As a local control state, Washington schools’ success (and budget) are dependent on the school board.
   Support of arts education is especially important now: Core programs have been cut across the state and we need school boards to help get art back into schools.
   Every other year, we survey school board candidates to make sure you can make the most informed vote possible.
@@ -25,7 +25,7 @@ layout: survey_default
   {% for region in grouped_districts %}
     <div class="card mb-3">
       <div class="card-body">
-        <a href="{{region.name | datapage_url: 'responses'}}">
+        <a href="{{region.name | datapage_url: 'responses'}}" class="link-dark">
           <h5 class="card-title">
             ESD
             {{region.name}}
@@ -55,5 +55,6 @@ layout: survey_default
         </p>
       </div>
     </div>
+    <a href="#top">Back to top</a>
   {% endfor %}
 </div>
