@@ -7,13 +7,13 @@ layout: survey_default
 
 <p>
   As a local control state, Washington schools’ success (and budget) are dependent on the school board.
-  Support of arts education is especially important now: Core programs have been cut across the state and we need school boards to help get art back into schools.
-  Every other year, we survey school board candidates to make sure you can make the most informed vote possible.
-  As a nonprofit, we can’t endorse candidates, but we can share their views.
+    Support of arts education is especially important now: Core programs have been cut across the state and we need school boards to help get art back into schools.
+    Every other year, we survey school board candidates to make sure you can make the most informed vote possible.
+    As a nonprofit, we can’t endorse candidates, but we can share their views.
 </p>
 <p>
   This year, we asked about personal experiences with the arts, subjective assessments of district arts programs, and steps candidates are willing to take if elected to ensure the arts are supported.
-  To find your candidate’s response, just scroll to find your district and click the ESD to see the full survey. (We suggest desktop vs mobile for readability.) We had the largest percentage of responses in the survey’s history but if you don’t see your school district highlighted, it means we didn’t receive any response from candidates in that school district.
+    To find your candidate’s response, just scroll to find your district and click the ESD to see the full survey. (We suggest desktop vs mobile for readability.) We had the largest percentage of responses in the survey’s history but if you don’t see your school district highlighted, it means we didn’t receive any response from candidates in that school district.
 </p>
 <p>
   Thanks for getting informed and don’t forget to vote by November 2nd!
@@ -25,20 +25,24 @@ layout: survey_default
   {% for region in grouped_districts %}
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title">
-          ESD
-          {{region.name}}
-        </h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{region.items.first.esd_name}}</h6>
+        <a href="{{region.name | datapage_url: 'responses'}}">
+          <h5 class="card-title">
+            ESD
+            {{region.name}}
+          </h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{region.items.first.esd_name}}</h6>
+        </a>
         <p class="card-text">
           <ul style="columns: 2">
             {% for district in region.items %}
               {% if district.response == "true" %}
                 <li class="response">
-                  <strong>
-                    {{district.district}}
-                    {{district.type}}
-                  </strong>
+                  <a href="{{region.name | datapage_url: 'responses'}}#{{district.district | slugify }}">
+                    <strong>
+                      {{district.district}}
+                      {{district.type}}
+                    </strong>
+                  </a>
                 </li>
               {% else %}
                 <li>

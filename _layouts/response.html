@@ -17,7 +17,7 @@ To find contact information, go to <a href="https://voter.votewa.gov/CandidateLi
 {% assign grouped_districts = page.items | group_by: 'district' %}
 
 {% for district in grouped_districts %}
-  <h2 class="text-center district">{{district.name}} {{district.items.first.type}}</h2>
+  <h2 class="text-center district" id="{{district.name | slugify}}">{{district.name}} {{district.items.first.type}}</h2>
   {% assign positions = district.items | group_by: 'position' %}
   {% for position in positions %}
     <h3>Position {{position.name}}</h3>
