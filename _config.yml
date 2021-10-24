@@ -36,7 +36,6 @@ page_gen:
   name: esd
   title: district
   group_by: esd
-  debug: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
