@@ -9,7 +9,17 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@v2
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Get cached gems
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Build and deploy
         with:
           token: ${{ secrets.GH_TOKEN }}
