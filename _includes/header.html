@@ -5,10 +5,21 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-sbc">
     <div class="container">
       <a class="navbar-brand" href="https://artsedwashington.org/">
-        <img alt="" height="26" src="/assets/logo-white.png" width="96">
+        <img
+          alt=""
+          height="26"
+          src="/assets/logo-white.png"
+          width="96" />
       </a>
       {%- if titles_size > 0 -%}
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+        <button
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          data-bs-target="#navbarSupportedContent"
+          data-bs-toggle="collapse"
+          type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -18,7 +29,10 @@
               {%- if my_page.title -%}
                 {%- unless my_page.nav == false -%}
                   <li class="nav-item">
-                    <a class="nav-link {% if page.url == my_page.url %} active" aria-current="page{%- endif -%}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                    <a
+                      class="nav-link {% if page.url == my_page.url %} active"
+                      aria-current="page{%- endif -%}"
+                      href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                   </li>
                 {%- endunless -%}
               {%- endif -%}
@@ -29,6 +43,10 @@
 
             <li class="nav-item">
               <a class="nav-link" href="https://artsedwashington.org/donate">Donate</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ site.baseurl }}/assets/essb-5878.pdf">SB5878</a>
             </li>
           </ul>
         </div>
