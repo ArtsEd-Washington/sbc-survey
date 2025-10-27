@@ -10,49 +10,26 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repository
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      # 2. Setup Ruby with bundler caching
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
+          ruby-version: "3.1"
           bundler-cache: true
 
-      # 3. Configure GitHub Pages
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
-      # 4. Build Jekyll site
-      - name: Build with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
-      # 5. Upload built site as artifact
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: ./_site
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          # Deploy folder
+          folder: ./_site
