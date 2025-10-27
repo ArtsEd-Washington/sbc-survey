@@ -30,15 +30,26 @@
                 {%- unless my_page.nav == false -%}
                   <li class="nav-item">
                     <a
-                      class="nav-link {% if page.url == my_page.url %} active"
-                      aria-current="page{%- endif -%}"
+                      class="nav-link{% if page.url == my_page.url %} active{% endif %}"
+                      aria-current="{% if page.url == my_page.url %}page{% endif %}"
                       href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                   </li>
                 {%- endunless -%}
               {%- endif -%}
             {%- endfor -%}
+
+            {%- assign root_pages = site.pages | where: "url", "/" -%}
+            {%- unless root_pages.size > 0 -%}
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+            </li>
+            {%- endunless -%}
+
+            <li class="nav-item">
+              <a class="nav-link" href="/2025/">2025 Survey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/2023/">2023 Survey</a>
             </li>
 
             <li class="nav-item">

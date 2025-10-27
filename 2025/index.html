@@ -1,0 +1,82 @@
+---
+layout: survey_default
+permalink: /2025/
+title: "2025 Survey"
+nav: false
+---
+<h1>2025 School Board Candidate Survey Responses</h1>
+
+<p><strong>Thanks for your interest in supporting arts education!</strong></p>
+
+<p>Washington is a “local control” state which means that local school districts decide how to apply state-approved policies, curriculum, and finances, not explicitly regulated by the Washington Legislature or OSPI. <strong>School board directors play an important role</strong> in ensuring that ALL students can access the benefits that come from a quality, sequential arts education. </p>
+
+<p>In odd numbered years, districts throughout Washington hold elections for School Board Candidate positions, and ArtsEd Washington invites the candidates to <strong>share their vision for arts education so that voters</strong> can make informed decisions on their ballot! </p>
+
+<p>This year, AEW invited over 700 School Board Candidates! To find your candidate's response, just scroll to find your district and click the Educational Service District to see the full survey. (We suggest desktop vs mobile for readability.)</p>
+
+<p>We received <strong>82 responses</strong> representing <strong>62 school districts</strong> from all 9 ESDs. If you don't see your school district highlighted, it means we didn't receive any response from candidates in that school district.</p>
+
+<hr>
+<p>Thanks for being an informed participant in advocating for arts education! Remember to vote on or before November 4th!</p>
+
+<img
+  src="/assets/esd-map.png"
+  usemap="#image-map"
+  alt="ESD Map"
+  width="100%">
+
+<map name="image-map">
+  <area target="" alt="ESD114" title="ESD114" href="#114" coords="102,431,41,210,416,303,458,480" shape="poly">
+  <area target="" alt="ESD113" title="ESD113" href="#113" coords="106,445,406,494,459,648,675,695,673,785,181,754" shape="poly">
+  <area target="" alt="ESD112" title="ESD112" href="#112" coords="184,777,654,811,651,898,733,922,748,976,785,1002,416,1012,368,872,171,816" shape="poly">
+  <area target="" alt="ESD189" title="ESD189" href="#189" coords="439,24,804,26,743,369,507,378,426,246,329,102,459,91" shape="poly">
+  <area target="" alt="ESD121" title="ESD121" href="#121" coords="466,398,750,392,674,667,476,647,423,506,478,490" shape="poly">
+  <area target="" alt="ESD171" title="ESD171" href="#171" coords="818,33,1193,32,1190,636,988,604,968,539,763,454" shape="poly">
+  <area target="" alt="ESD105" title="ESD105" href="#105" coords="746,457,944,571,970,625,1098,634,1092,689,1003,716,981,960,814,1003,746,898,677,875" shape="poly">
+  <area target="" alt="ESD101" title="ESD101" href="#101" coords="1203,32,1576,700" shape="rect">
+  <area target="" alt="ESD123" title="ESD123" href="#123" coords="1014,739,1112,718,1121,651,1176,663,1218,722,1582,739,1613,904,1008,957" shape="poly">
+</map>
+
+{% assign all_districts = site.data['2025-districts'] %}
+{% assign grouped_districts = all_districts | group_by: 'esd' %}
+{% assign responses = site.data['2025-candidate-q-and-a'] | default: [] %}
+
+<div class="container">
+  {% for region in grouped_districts %}
+    <div id="{{ region.name }}" class="card mb-3">
+      <div class="card-body">
+        {% assign esd_page = '/' | append: '2025/response/' | append: region.name | append: '.html' %}
+        <a href="{{ esd_page | relative_url }}" class="link-dark">
+          <h5 class="card-title">ESD {{ region.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ region.items.first.esd_name }}</h6>
+        </a>
+        <p class="card-text">
+          <ul style="columns: 2">
+            {% assign esd_responses = responses | where: "esd", region.name %}
+            {% for district in region.items %}
+              {% assign resp_for_district = esd_responses | where: "district", district.district %}
+              {% assign dslug = district.district | slugify %}
+              <li class="response">
+                {% if resp_for_district.size > 0 %}
+                  {% assign esd_page = '/' | append: '2025/response/' | append: region.name | append: '.html' %}
+                  <a href="{{ esd_page | append: '#' | append: '' | append: dslug | relative_url }}"  style="color:#405176">
+                    <strong>{{ district.district }}</strong>
+                  </a>
+                {% else %}
+                  <span class="text-muted">{{ district.district }}</span>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </p>
+      </div>
+    </div>
+
+     <p class="mt-2"><a href="#top" class="btn btn-sm btn-link" style="color:#405176">Back to top</a></p>
+
+  {% endfor %}
+</div>
+
+<script>
+  imageMapResize();
+</script>

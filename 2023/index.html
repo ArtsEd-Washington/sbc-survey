@@ -3,7 +3,11 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: survey_default
+permalink: /2023/
+title: "2023 Survey"
+nav: false
 ---
+<h1>2023 School Board Candidate Survey Responses</h1>
 <p>
   As a local control state, Washington schools’ success (and budget) are dependent on the school board. Support of arts education is especially important now: the passage of SB5878 requires schools with more than 200 enrolled students to offer arts, visual or performing, each year a student is enrolled in K-12 school. This must be taught by a certified art teacher. At least one year's credit is a high school graduation requirement. This law clarifies the state's position on arts education but local school boards and administrators will be responsible for determing how to implement it in their schools. The text of the law can be found at <a href="{{ site.baseurl }}/assets/essb-5878.pdf">SB5878</a>
 <p>
@@ -90,43 +94,43 @@ layout: survey_default
     shape="poly">
 </map>
 
-{% assign grouped_districts = site.data.districts | group_by: 'esd' %}
+{% assign all_districts = site.data['2023-districts'] %}
+{% assign grouped_districts = all_districts | group_by: 'esd' %}
+{% assign responses = site.data['2023-candidate-q-and-a'] | default: [] %}
 
 <div class="container">
   {% for region in grouped_districts %}
-    <div id="{{region.name}}" class="card mb-3">
+    <div id="{{ region.name }}" class="card mb-3">
       <div class="card-body">
-        <a href="{{region.name | datapage_url: 'responses'}}" class="link-dark">
-          <h5 class="card-title">
-            ESD
-            {{ region.name }}
-          </h5>
+        {% assign esd_page = '/' | append: '2023/response/' | append: region.name | append: '.html' %}
+        <a href="{{ esd_page | relative_url }}" class="link-dark">
+          <h5 class="card-title">ESD {{ region.name }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ region.items.first.esd_name }}</h6>
         </a>
         <p class="card-text">
           <ul style="columns: 2">
+            {% assign esd_responses = responses | where: "esd", region.name %}
             {% for district in region.items %}
-              {% if district.response == "true" %}
-                <li class="response">
-                  <a href="{{region.name | datapage_url: 'responses'}}#{{district.district | slugify }}">
-                    <strong>
-                      {{ district.district }}
-                      {{ district.type }}
-                    </strong>
+              {% assign resp_for_district = esd_responses | where: "district", district.district %}
+              {% assign dslug = district.district | slugify %}
+              <li class="response">
+                {% if resp_for_district.size > 0 %}
+                  {% assign esd_page = '/' | append: '2023/response/' | append: region.name | append: '.html' %}
+                  <a href="{{ esd_page | append: '#' | append: '' | append: dslug | relative_url }}"  style="color:#405176">
+                    <strong>{{ district.district }}</strong>
                   </a>
-                </li>
-              {% else %}
-                <li>
-                  {{ district.district }}
-                  {{ district.type }}
-                </li>
-              {% endif %}
+                {% else %}
+                  <span class="text-muted">{{ district.district }}</span>
+                {% endif %}
+              </li>
             {% endfor %}
           </ul>
         </p>
       </div>
     </div>
-    <a href="#top">Back to top</a>
+
+     <p class="mt-2"><a href="#top" class="btn btn-sm btn-link" style="color:#405176">Back to top</a></p>
+
   {% endfor %}
 </div>
 

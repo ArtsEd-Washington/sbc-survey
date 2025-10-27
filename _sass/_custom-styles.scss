@@ -13,9 +13,10 @@
 }
 
 body {
-  background-image: url("/assets/header.svg");
+  background-image: url("/assets/header-2025.svg");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: auto 250px;
 }
 
 main {
@@ -23,7 +24,7 @@ main {
 }
 
 .district {
-  background-color: rgb(91.369629%, 76.469421%, 7.058716%);
+  background-color: #f0bb18;
   background-repeat: no-repeat;
   height: 5rem;
   padding-top: 1.4rem;

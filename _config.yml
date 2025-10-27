@@ -27,15 +27,12 @@ plugins:
 
 remote_theme: jonaharagon/jekyll-bootstrap-theme
 
-page_gen-dirs: false
+# centralized path anchors
+paths:
+  resp2023: &resp2023 "2023/responses"
+  resp2025: &resp2025 "2025/responses"
 
-page_gen:
-- data: candidate-responses
-  template: response
-  dir: responses
-  name: esd
-  title: district
-  group_by: esd
+page_gen-dirs: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
