@@ -5,20 +5,7 @@ nav: false
 
 <h1>ESD {{ page.items.first.esd }} {{ page.items.first.esd_name }}</h1>
 
-<p>
-  All candidates who provided a valid email address when they registered their 
-  campaign have been invited to participate.
-</p>
-<p>
-  If you don't see your district's candidates and would like them to answer 
-  these questions, feel free to email them the link below and cc
-  office@artsedwashington.org. We're happy to add their responses.
-  <a href="https://forms.gle/8jggc8cunCjAsVE2A" style="color:#405176">https://forms.gle/8jggc8cunCjAsVE2A</a>
-</p>
-<p>
-  To find contact information, go to
-  <a href="https://voter.votewa.gov/CandidateList.asp" style="color:#405176">https://voter.votewa.gov/CandidateList.asp</a>, choose your County and add the word "school" under District type.
-</p>
+
 
 {% assign grouped_districts = page.items | group_by: 'district' %}
 

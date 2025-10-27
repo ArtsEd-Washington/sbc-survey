@@ -19,7 +19,7 @@ esd
 esd_name
     - use just the number i.e. "189" not "ESD189"
 district
-    - must be just base name of district i.e. "Lynden" not "Lynden School District #504"
+    - must be just base name of district i.e. "Lynden" not "Lynden School District #504". Double-check these names against the existing names identified in the yyyy-districts.csv file. Example "Seattle Public Schools" must be just "Seattle".
 type
 position
 name

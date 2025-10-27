@@ -13,7 +13,7 @@
 }
 
 body {
-  background-image: url("/assets/header-2025.svg");
+  background-image: url("/assets/header-2025.webp");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: auto 250px;
@@ -30,15 +30,15 @@ main {
   padding-top: 1.4rem;
 }
 
-.district:nth-child(odd) {
-  background-image: url("/assets/districts-left.svg");
-  background-position: left center;
-}
+// .district:nth-child(odd) {
+//   background-image: url("/assets/districts-left.svg");
+//   background-position: left center;
+// }
 
-.district:nth-child(even) {
-  background-image: url("/assets/districts-right.svg");
-  background-position: right center;
-}
+// .district:nth-child(even) {
+//   background-image: url("/assets/districts-right.svg");
+//   background-position: right center;
+// }
 
 .response a {
   color: $teal-700;
