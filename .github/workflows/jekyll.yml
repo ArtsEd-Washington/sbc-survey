@@ -18,33 +18,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repository
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      # 2. Setup Ruby without Bundler
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          install-bundler: false  # <--- prevent automatic Bundler install
+          bundler: false        # <--- disables automatic Bundler install
+          bundler-cache: false  # <--- disables caching
 
-      # 3. Install Bundler manually
       - name: Install Bundler
         run: gem install bundler
 
-      # 4. Install dependencies
-      - name: Install gems
-        run: bundle install
-
-      # 5. Build Jekyll site
-      - name: Build Jekyll site
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
-
-      # 6. Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        with:
-          folder: ./_site
+      - name: Insta
