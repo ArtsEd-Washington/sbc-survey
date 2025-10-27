@@ -25,21 +25,19 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          bundler: false
-          bundler-cache: false
+          bundler-cache: true
 
-      - name: Install Bundler
-        run: gem install bundler
-
-      - name: Install gems
-        run: bundle install
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
       - name: Build Jekyll site
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
-        with:
-          folder: ./_site
+        id: deployment
+        uses: actions/deploy-pages@v2
