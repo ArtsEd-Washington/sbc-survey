@@ -1,0 +1,299 @@
+esd,esd_name,district,type,response
+113,Capital Region Educational Service District,Aberdeen,School District,false
+113,Capital Region Educational Service District,Adna,School District,false
+101,Northeast WA Educational Service District,Almira,School District,false
+189,Northwest Educational Service District,Anacortes,School District,true
+189,Northwest Educational Service District,Arlington,School District,true
+123,Educational Service District,Asotin-Anatone,School District,false
+121,Puget Sound Educational Service District,Auburn,School District,false
+121,Puget Sound Educational Service District,Bainbridge Island,School District,false
+112,Educational Service Agency,Battle Ground,School District,false
+121,Puget Sound Educational Service District,Bellevue,School District,true
+189,Northwest Educational Service District,Bellingham,School District,false
+101,Northeast WA Educational Service District,Benge,School District,false
+121,Puget Sound Educational Service District,Bethel,School District,true
+105,Educational Service District,Bickleton,School District,false
+189,Northwest Educational Service District,Blaine,School District,true
+113,Capital Region Educational Service District,Boistfort,School District,false
+114,Olympic Educational Service District,Bremerton,School District,false
+171,North Central Educational Service District,Brewster,School District,false
+171,North Central Educational Service District,Bridgeport,School District,false
+114,Olympic Educational Service District,Brinnon,School District,false
+189,Northwest Educational Service District,Burlington-Edison,School District,true
+112,Educational Service Agency,Camas,School District,true
+114,Olympic Educational Service District,Cape Flattery,School District,false
+121,Puget Sound Educational Service District,Carbonado,School District,false
+171,North Central Educational Service District,Cascade,School District,false
+171,North Central Educational Service District,Cashmere,School District,false
+112,Educational Service Agency,Castle Rock,School District,false
+112,Educational Service Agency,Centerville,School District,false
+114,Olympic Educational Service District,Central Kitsap,School District,false
+101,Northeast WA Educational Service District,Central Valley,School District,true
+113,Capital Region Educational Service District,Centralia,School District,false
+113,Capital Region Educational Service District,Chehalis,School District,true
+101,Northeast WA Educational Service District,Cheney,School District,true
+101,Northeast WA Educational Service District,Chewelah,School District,true
+114,Olympic Educational Service District,Chimacum,School District,false
+123,Educational Service District,Clarkston,School District,false
+105,Educational Service District,Cle Elum-Roslyn,School District,false
+121,Puget Sound Educational Service District,Clover Park,School District,true
+101,Northeast WA Educational Service District,Colfax,School District,false
+123,Educational Service District,College Place,School District,false
+101,Northeast WA Educational Service District,Colton,School District,false
+101,Northeast WA Educational Service District,Columbia (Stevens),School District,false
+123,Educational Service District,Columbia (Walla Walla),School District,false
+101,Northeast WA Educational Service District,Colville,School District,false
+189,Northwest Educational Service District,Concrete,School District,false
+189,Northwest Educational Service District,Conway,School District,false
+113,Capital Region Educational Service District,Cosmopolis,School District,false
+171,North Central Educational Service District,Coulee-Hartline,School District,false
+189,Northwest Educational Service District,Coupeville,School District,true
+114,Olympic Educational Service District,Crescent,School District,false
+101,Northeast WA Educational Service District,Creston,School District,false
+101,Northeast WA Educational Service District,Curlew,School District,false
+101,Northeast WA Educational Service District,Cusick,School District,false
+105,Educational Service District,Damman,School District,false
+189,Northwest Educational Service District,Darrington,School District,false
+101,Northeast WA Educational Service District,Davenport,School District,false
+123,Educational Service District,Dayton,School District,false
+101,Northeast WA Educational Service District,Deer Park,School District,false
+121,Puget Sound Educational Service District,Dieringer,School District,false
+123,Educational Service District,Dixie,School District,false
+101,Northeast WA Educational Service District,East Valley (Spokane),School District,false
+105,Educational Service District,East Valley (Yakima),School District,false
+171,North Central Educational Service District,Eastmont,School District,false
+105,Educational Service District,Easton,School District,false
+121,Puget Sound Educational Service District,Eatonville,School District,true
+189,Northwest Educational Service District,Edmonds,School District,false
+105,Educational Service District,Ellensburg,School District,false
+113,Capital Region Educational Service District,Elma,School District,false
+101,Northeast WA Educational Service District,Endicott,School District,false
+171,North Central Educational Service District,Entiat,School District,false
+121,Puget Sound Educational Service District,Enumclaw,School District,false
+171,North Central Educational Service District,Ephrata,School District,false
+113,Capital Region Educational Service District,Evaline,School District,false
+189,Northwest Educational Service District,Everett,School District,false
+101,Northeast WA Educational Service District,Evergreen (Stevens),School District,false
+112,Educational Service Agency,Evergreen (Clark),School District,true
+121,Puget Sound Educational Service District,Federal Way,School District,true
+189,Northwest Educational Service District,Ferndale,School District,true
+121,Puget Sound Educational Service District,Fife,School District,false
+123,Educational Service District,Finley,School District,false
+121,Puget Sound Educational Service District,Franklin Pierce,School District,false
+101,Northeast WA Educational Service District,Freeman,School District,false
+101,Northeast WA Educational Service District,Garfield,School District,false
+112,Educational Service Agency,Glenwood,School District,false
+105,Educational Service District,Goldendale,School District,false
+171,North Central Educational Service District,Grand Coulee Dam,School District,false
+105,Educational Service District,Grandview,School District,false
+105,Educational Service District,Granger,School District,false
+189,Northwest Educational Service District,Granite Falls,School District,false
+113,Capital Region Educational Service District,Grapeview,School District,false
+101,Northeast WA Educational Service District,Great Northern,School District,false
+112,Educational Service Agency,Green Mountain,School District,false
+113,Capital Region Educational Service District,Griffin,School District,true
+101,Northeast WA Educational Service District,Harrington,School District,false
+105,Educational Service District,Highland,School District,false
+121,Puget Sound Educational Service District,Highline,School District,true
+112,Educational Service Agency,Hockinson,School District,true
+113,Capital Region Educational Service District,Hood Canal,School District,false
+113,Capital Region Educational Service District,Hoquiam,School District,false
+101,Northeast WA Educational Service District,Inchelium,School District,false
+189,Northwest Educational Service District,Index,School District,false
+121,Puget Sound Educational Service District,Issaquah,School District,false
+123,Educational Service District,Kahlotus,School District,false
+112,Educational Service Agency,Kalama,School District,true
+101,Northeast WA Educational Service District,Keller,School District,false
+112,Educational Service Agency,Kelso,School District,false
+123,Educational Service District,Kennewick,School District,false
+121,Puget Sound Educational Service District,Kent,School District,true
+101,Northeast WA Educational Service District,Kettle Falls,School District,false
+123,Educational Service District,Kiona-Benton,School District,false
+105,Educational Service District,Kittitas,School District,false
+112,Educational Service Agency,Klickitat,School District,false
+112,Educational Service Agency,La Center,School District,true
+189,Northwest Educational Service District,La Conner,School District,false
+101,Northeast WA Educational Service District,LaCrosse,School District,false
+171,North Central Educational Service District,Lake Chelan,School District,false
+189,Northwest Educational Service District,Lake Stevens,School District,false
+121,Puget Sound Educational Service District,Lake Washington,School District,false
+189,Northwest Educational Service District,Lakewood,School District,false
+101,Northeast WA Educational Service District,Lamont,School District,false
+101,Northeast WA Educational Service District,Liberty,School District,false
+101,Northeast WA Educational Service District,Lind,School District,false
+112,Educational Service Agency,Longview,School District,false
+101,Northeast WA Educational Service District,Loon Lake,School District,false
+189,Northwest Educational Service District,Lopez Island,School District,false
+112,Educational Service Agency,Lyle,School District,false
+189,Northwest Educational Service District,Lynden,School District,true
+105,Educational Service District,Mabton,School District,false
+171,North Central Educational Service District,Mansfield,School District,false
+171,North Central Educational Service District,Manson,School District,false
+113,Capital Region Educational Service District,Mary M Knight,School District,false
+101,Northeast WA Educational Service District,Mary Walker,School District,false
+189,Northwest Educational Service District,Marysville,School District,false
+113,Capital Region Educational Service District,McCleary,School District,false
+101,Northeast WA Educational Service District,Mead,School District,false
+101,Northeast WA Educational Service District,Medical Lake,School District,true
+121,Puget Sound Educational Service District,Mercer Island,School District,true
+189,Northwest Educational Service District,Meridian,School District,true
+171,North Central Educational Service District,Methow Valley,School District,false
+112,Educational Service Agency,Mill A,School District,true
+189,Northwest Educational Service District,Monroe,School District,false
+113,Capital Region Educational Service District,Montesano,School District,false
+113,Capital Region Educational Service District,Morton,School District,false
+171,North Central Educational Service District,Moses Lake,School District,true
+113,Capital Region Educational Service District,Mossyrock,School District,false
+105,Educational Service District,Mount Adams,School District,false
+189,Northwest Educational Service District,Mount Baker,School District,true
+112,Educational Service Agency,Mount Pleasant,School District,false
+189,Northwest Educational Service District,Mount Vernon,School District,false
+189,Northwest Educational Service District,Mukilteo,School District,true
+105,Educational Service District,Naches Valley,School District,false
+113,Capital Region Educational Service District,Napavine,School District,false
+112,Educational Service Agency,Naselle-Grays River Valley,School District,false
+171,North Central Educational Service District,Nespelem,School District,false
+101,Northeast WA Educational Service District,Newport,School District,true
+101,Northeast WA Educational Service District,Nine Mile Falls,School District,false
+189,Northwest Educational Service District,Nooksack Valley,School District,false
+113,Capital Region Educational Service District,North Beach,School District,true
+123,Educational Service District,North Franklin,School District,false
+114,Olympic Educational Service District,North Kitsap,School District,true
+114,Olympic Educational Service District,North Mason,School District,false
+113,Capital Region Educational Service District,North River,School District,false
+113,Capital Region Educational Service District,North Thurston,Public Schools,false
+101,Northeast WA Educational Service District,Northport,School District,false
+121,Puget Sound Educational Service District,Northshore,School District,true
+189,Northwest Educational Service District,Oak Harbor,School District,true
+101,Northeast WA Educational Service District,Oakesdale,School District,false
+113,Capital Region Educational Service District,Oakville,School District,false
+112,Educational Service Agency,Ocean Beach,School District,false
+113,Capital Region Educational Service District,Ocosta,School District,false
+101,Northeast WA Educational Service District,Odessa,School District,false
+171,North Central Educational Service District,Okanogan,School District,false
+113,Capital Region Educational Service District,Olympia,School District,true
+171,North Central Educational Service District,Omak,School District,true
+113,Capital Region Educational Service District,Onalaska,School District,false
+101,Northeast WA Educational Service District,Onion Creek,School District,false
+189,Northwest Educational Service District,Orcas Island,School District,false
+101,Northeast WA Educational Service District,Orchard Prairie,School District,false
+101,Northeast WA Educational Service District,Orient,School District,false
+171,North Central Educational Service District,Orondo,School District,false
+171,North Central Educational Service District,Oroville,School District,false
+121,Puget Sound Educational Service District,Orting,School District,false
+123,Educational Service District,Othello,School District,true
+171,North Central Educational Service District,Palisades,School District,false
+101,Northeast WA Educational Service District,Palouse,School District,false
+123,Educational Service District,Pasco,School District,true
+171,North Central Educational Service District,Pateros,School District,false
+123,Educational Service District,Paterson,School District,false
+113,Capital Region Educational Service District,Pe Ell,School District,false
+121,Puget Sound Educational Service District,Peninsula,School District,false
+113,Capital Region Educational Service District,Pioneer,School,true
+123,Educational Service District,Pomeroy,School District,false
+114,Olympic Educational Service District,Port Angeles,School District,false
+114,Olympic Educational Service District,Port Townsend,School District,true
+123,Educational Service District,Prescott,School District,false
+123,Educational Service District,Prosser,School District,false
+101,Northeast WA Educational Service District,Pullman,School District,false
+121,Puget Sound Educational Service District,Puyallup,School District,true
+114,Olympic Educational Service District,Queets-Clearwater,School District,false
+114,Olympic Educational Service District,Quilcene,School District,true
+114,Olympic Educational Service District,Quillayute Valley,School District,false
+113,Capital Region Educational Service District,Quinault,School District,false
+171,North Central Educational Service District,Quincy,School District,false
+113,Capital Region Educational Service District,Rainier,School District,false
+113,Capital Region Educational Service District,Raymond,School District,false
+101,Northeast WA Educational Service District,Reardan Edwall,School District,false
+121,Puget Sound Educational Service District,Renton,School District,false
+101,Northeast WA Educational Service District,Republic,School District,false
+123,Educational Service District,Richland,School District,false
+112,Educational Service Agency,Ridgefield,School District,true
+101,Northeast WA Educational Service District,Ritzville,School District,false
+101,Northeast WA Educational Service District,Riverside,School District,false
+121,Puget Sound Educational Service District,Riverview,School District,true
+113,Capital Region Educational Service District,Rochester,School District,false
+112,Educational Service Agency,Roosevelt,School District,false
+101,Northeast WA Educational Service District,Rosalia,School District,false
+105,Educational Service District,Royal,School District,false
+189,Northwest Educational Service District,San Juan Island,School District,false
+113,Capital Region Educational Service District,Satsop,School District,false
+121,Puget Sound Educational Service District,Seattle,Public Schools,true
+189,Northwest Educational Service District,Sedro-Woolley,School District,true
+105,Educational Service District,Selah,School District,true
+101,Northeast WA Educational Service District,Selkirk,School District,false
+114,Olympic Educational Service District,Sequim,School District,false
+189,Northwest Educational Service District,Shaw Island,School District,false
+113,Capital Region Educational Service District,Shelton,School District,false
+121,Puget Sound Educational Service District,Shoreline,School District,false
+112,Educational Service Agency,Skamania,School District,false
+121,Puget Sound Educational Service District,Skykomish,School District,false
+189,Northwest Educational Service District,Snohomish,School District,false
+121,Puget Sound Educational Service District,Snoqualmie Valley,School District,true
+171,North Central Educational Service District,Soap Lake,School District,false
+113,Capital Region Educational Service District,South Bend,School District,false
+114,Olympic Educational Service District,South Kitsap,School District,true
+189,Northwest Educational Service District,South Whidbey,School District,false
+113,Capital Region Educational Service District,Southside,School District,false
+101,Northeast WA Educational Service District,Spokane,Public Schools,false
+101,Northeast WA Educational Service District,Sprague,School District,false
+101,Northeast WA Educational Service District,St. John,School District,false
+189,Northwest Educational Service District,Stanwood-Camano,School District,true
+123,Educational Service District,Star,School District,false
+123,Educational Service District,Starbuck,School District,false
+171,North Central Educational Service District,Stehekin,School District,false
+121,Puget Sound Educational Service District,Steilacoom,School District,false
+101,Northeast WA Educational Service District,Steptoe,School District,false
+112,Educational Service Agency,Stevenson-Carson,School District,false
+189,Northwest Educational Service District,Sultan,School District,true
+101,Northeast WA Educational Service District,Summit Valley,School District,false
+121,Puget Sound Educational Service District,Sumner-Bonney Lake,School District,true
+105,Educational Service District,Sunnyside,School District,false
+121,Puget Sound Educational Service District,Tacoma,School District,true
+113,Capital Region Educational Service District,Taholah,School District,false
+121,Puget Sound Educational Service District,Tahoma,School District,true
+101,Northeast WA Educational Service District,Tekoa,School District,false
+113,Capital Region Educational Service District,Tenino,School District,false
+105,Educational Service District,Thorp,School District,false
+113,Capital Region Educational Service District,Toledo,School District,false
+171,North Central Educational Service District,Tonasket,School District,false
+105,Educational Service District,Toppenish,School District,false
+123,Educational Service District,Touchet,School District,false
+112,Educational Service Agency,Toutle Lake,School District,false
+112,Educational Service Agency,Trout Lake,School District,false
+121,Puget Sound Educational Service District,Tukwila,School District,false
+113,Capital Region Educational Service District,Tumwater,School District,false
+105,Educational Service District,Union Gap,School District,false
+121,Puget Sound Educational Service District,University Place,School District,false
+101,Northeast WA Educational Service District,Valley,School District,false
+112,Educational Service Agency,Vancouver,School District,true
+121,Puget Sound Educational Service District,Vashon Island,School District,false
+113,Capital Region Educational Service District,Wa He Lut Indian,School,false
+112,Educational Service Agency,Wahkiakum,School District,false
+105,Educational Service District,Wahluke,School District,false
+123,Educational Service District,Waitsburg,School District,false
+123,Educational Service District,Walla Walla,Public Schools,false
+105,Educational Service District,Wapato,School District,false
+171,North Central Educational Service District,Warden,School District,false
+112,Educational Service Agency,Washington School for the Deaf,,false
+112,Educational Service Agency,Washington State School for the Blind,,false
+112,Educational Service Agency,Washougal,School District,false
+101,Northeast WA Educational Service District,Washtucna,School District,false
+171,North Central Educational Service District,Waterville,School District,false
+101,Northeast WA Educational Service District,Wellpinit,School District,false
+171,North Central Educational Service District,Wenatchee,School District,true
+101,Northeast WA Educational Service District,West Valley (Spokane),School District,false
+105,Educational Service District,West Valley (Yakima),School District,true
+113,Capital Region Educational Service District,White Pass,School District,false
+121,Puget Sound Educational Service District,White River,School District,false
+112,Educational Service Agency,White Salmon Valley,School District,true
+101,Northeast WA Educational Service District,Wilbur,School District,false
+113,Capital Region Educational Service District,Willipa Valley,School District,false
+171,North Central Educational Service District,Wilson Creek,School District,false
+113,Capital Region Educational Service District,Winlock,School District,false
+113,Capital Region Educational Service District,Wishkah Valley,School District,false
+112,Educational Service Agency,Wishram,School District,false
+112,Educational Service Agency,Woodland,School District,false
+105,Educational Service District,Yakima,School District,true
+113,Capital Region Educational Service District,Yelm,School District,false
+105,Educational Service District,Zillah,School District,false

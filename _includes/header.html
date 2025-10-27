@@ -8,7 +8,7 @@
         <img
           alt=""
           height="26"
-          src="/assets/logo-white.png"
+          src="/assets/artsed-logo-white-nu.png"
           width="96" />
       </a>
       {%- if titles_size > 0 -%}
@@ -30,24 +30,33 @@
                 {%- unless my_page.nav == false -%}
                   <li class="nav-item">
                     <a
-                      class="nav-link {% if page.url == my_page.url %} active"
-                      aria-current="page{%- endif -%}"
+                      class="nav-link{% if page.url == my_page.url %} active{% endif %}"
+                      aria-current="{% if page.url == my_page.url %}page{% endif %}"
                       href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                   </li>
                 {%- endunless -%}
               {%- endif -%}
             {%- endfor -%}
+
+            {%- assign root_pages = site.pages | where: "url", "/" -%}
+            {%- unless root_pages.size > 0 -%}
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+            </li>
+            {%- endunless -%}
+
+            <li class="nav-item">
+              <a class="nav-link" href="/2025/">2025 Survey</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/2023/">2023 Survey</a>
             </li>
 
             <li class="nav-item">
               <a class="nav-link" href="https://artsedwashington.org/donate">Donate</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="{{ site.baseurl }}/assets/essb-5878.pdf">SB5878</a>
-            </li>
+   
           </ul>
         </div>
       {%- endif -%}

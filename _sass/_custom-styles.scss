@@ -13,9 +13,10 @@
 }
 
 body {
-  background-image: url("/assets/header.svg");
+  background-image: url("/assets/header-2025.webp");
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: auto 250px;
 }
 
 main {
@@ -23,21 +24,21 @@ main {
 }
 
 .district {
-  background-color: rgb(91.369629%, 76.469421%, 7.058716%);
+  background-color: #f0bb18;
   background-repeat: no-repeat;
   height: 5rem;
   padding-top: 1.4rem;
 }
 
-.district:nth-child(odd) {
-  background-image: url("/assets/districts-left.svg");
-  background-position: left center;
-}
+// .district:nth-child(odd) {
+//   background-image: url("/assets/districts-left.svg");
+//   background-position: left center;
+// }
 
-.district:nth-child(even) {
-  background-image: url("/assets/districts-right.svg");
-  background-position: right center;
-}
+// .district:nth-child(even) {
+//   background-image: url("/assets/districts-right.svg");
+//   background-position: right center;
+// }
 
 .response a {
   color: $teal-700;

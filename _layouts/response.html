@@ -5,31 +5,18 @@ nav: false
 
 <h1>ESD {{ page.items.first.esd }} {{ page.items.first.esd_name }}</h1>
 
-<p>
-  All candidates who provided a valid email address when they registered their 
-  campaign have been invited to participate.
-</p>
-<p>
-  If you don't see your district's candidates and would like them to answer 
-  these questions, feel free to email them the link below and cc
-  office@artsedwashington.org. We're happy to add their responses.
-  <a href="https://forms.gle/8jggc8cunCjAsVE2A">https://forms.gle/8jggc8cunCjAsVE2A</a>
-</p>
-<p>
-  To find contact information, go to
-  <a href="https://voter.votewa.gov/CandidateList.asp">https://voter.votewa.gov/CandidateList.asp</a>, choose your County and add the word "school" under District type.
-</p>
+
 
 {% assign grouped_districts = page.items | group_by: 'district' %}
 
 <ul style="columns: 2">
   {% for district in grouped_districts %}
     <li>
-      <a href="#{{district.name | slugify}}">{{ district.name }} {{ district.items.first.type }}</a>
+      <a href="#{{district.name | slugify}}" style="color:#405176">{{ district.name }} {{ district.items.first.type }}</a>
     </li>
   {% endfor %}
 </ul>
-
+<br><br>
 {% for district in grouped_districts %}
   <h2 class="text-center district" id="{{district.name | slugify}}">
     {{ district.name }} {{ district.items.first.type }}
@@ -42,40 +29,52 @@ nav: false
         <div class="col-lg-6">
           <div class="card mb-3">
             <div class="card-body">
-              <h5 class="card-title">{{ person.name }}</h5>
+              <h5 class="card-title">{{ person.name | default: "Unnamed candidate" }}</h5>
               <div class="card-text">
-                <p>
-                  <strong>Which of these arts did you have as a part of your own K-12 
-              education?</strong>
-                </p>
-                <p>{{ person.arts | markdownify }}</p>
-                <p>
-                  <strong>How did the arts impact your education and life after high 
-              school?</strong>
-                </p>
-                <p>{{ person.impact | markdownify }}</p>
-                <p>
-                  <strong>If elected, which of these strategies would you consider to 
-              support arts education in your district?</strong>
-                </p>
-                <ul>
-                  {% assign strategies = person.strategies | split: ";" %}
-                  {% for strategy in strategies %}
-                    <li>{{ strategy }}</li>
-                  {% endfor %}
-                </ul>
-                <p>
-                  <strong>How do you plan to support and implement SB5878 this school 
-              year?</strong>
-                </p>
-                <p>{{ person.sb5878 | markdownify }}</p>
-                <p>
-                  <strong>Arts education which incorporates trauma-informed and culturally 
-              responsive practices can be uniquely beneficial, especially during
-              this challenging period in history. How do you see the arts
-              playing a role in student success in your district?</strong>
-                </p>
-                <p>{{ person.responsive | markdownify }}</p>
+                
+                {%  comment %}Question 1{% endcomment %}
+                {% if person.question1 %}
+                  <p><strong>{{ person.question1 }}</strong></p>
+                  <p>{{ person.response1 | default: "" | markdownify }}</p>
+                {% endif %}
+
+                {% comment %}Question 2{% endcomment %}
+                {% if person.question2 %}
+                  <p><strong>{{ person.question2 }}</strong></p>
+                  <p>{{ person.response2 | default: "" | markdownify }}</p>
+                {% endif %}
+
+                {% comment %}Question 3 - List format{% endcomment %}
+                {% if person.question3 %}
+                  <p><strong>{{ person.question3 }}</strong></p>
+                  <ul>
+                    {% assign strategies = person.response3 | default: "" | split: ";" %}
+                    {% for strategy in strategies %}
+                      {% if strategy != "" %}
+                        <li>{{ strategy }}</li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+                {% comment %}Question 4{% endcomment %}
+                {% if person.question4 %}
+                  <p><strong>{{ person.question4 }}</strong></p>
+                  <p>{{ person.response4 | default: "" | markdownify }}</p>
+                {% endif %}
+
+                {% comment %}Question 5{% endcomment %}
+                {% if person.question5 %}
+                  <p><strong>{{ person.question5 }}</strong></p>
+                  <p>{{ person.response5 | default: "" | markdownify }}</p>
+                {% endif %}
+
+                {% comment %}Question 6{% endcomment %}
+                {% if person.question6 %}
+                  <p><strong>{{ person.question6 }}</strong></p>
+                  <p>{{ person.response6 | default: "" | markdownify }}</p>
+                {% endif %}
+
               </div>
             </div>
           </div>
@@ -83,5 +82,5 @@ nav: false
       {% endfor %}
     </div>
   {% endfor %}
-  <a href="#top">Back to top</a>
+  <a href="#top" style="color:#405176">Back to top</a><br>
 {% endfor %}
