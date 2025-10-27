@@ -22,14 +22,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      # 2. Setup Ruby
+      # 2. Setup Ruby without Bundler
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          bundler-cache: false  # disable automatic bundler caching
+          install-bundler: false  # <--- prevent automatic Bundler install
 
-      # 3. Install Bundler
+      # 3. Install Bundler manually
       - name: Install Bundler
         run: gem install bundler
 
