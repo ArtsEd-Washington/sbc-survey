@@ -10,26 +10,41 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1. Checkout repository
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      # 2. Setup Ruby
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          bundler-cache: true
+          bundler-cache: false  # disable automatic bundler caching
 
+      # 3. Install Bundler
+      - name: Install Bundler
+        run: gem install bundler
+
+      # 4. Install dependencies
+      - name: Install gems
+        run: bundle install
+
+      # 5. Build Jekyll site
       - name: Build Jekyll site
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 
+      # 6. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
-          # Deploy folder
           folder: ./_site
