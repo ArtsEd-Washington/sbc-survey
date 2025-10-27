@@ -25,10 +25,21 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.1"
-          bundler: false        # <--- disables automatic Bundler install
-          bundler-cache: false  # <--- disables caching
+          bundler: false
+          bundler-cache: false
 
       - name: Install Bundler
         run: gem install bundler
 
-      - name: Insta
+      - name: Install gems
+        run: bundle install
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
+        with:
+          folder: ./_site
